@@ -71,5 +71,3 @@ def mutation(chance, population,MIM_GENE_VALUE, MAX_GENE_VALUE):
         c[rand_index] = rand_value
         mutateds.append(c)
     return mutateds
-
-    
