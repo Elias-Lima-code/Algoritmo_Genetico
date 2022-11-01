@@ -1,11 +1,11 @@
 from datetime import datetime
-import methods as md
+import backend.methods as md
 import asyncio
 
 def print_c(text, color, br = True):
     print(f"\033[{color}m{text}", end="\n" if br == True else "")
 
-def main():
+async def main(data):
 
     BLUE = 34
     WHITE = 97
@@ -18,9 +18,9 @@ def main():
 
     TOTAL_POPULATION = 50
     TOTAL_GENES = 5
-    TARGET_PERCENTAGE = 0.98
     MIN_GENE_VALUE = 1
     MAX_GENE_VALUE = 9
+    TARGET_PERCENTAGE = 0.98
     MIN_SUCCEEDED = 3
     CHOSEN_PERCENTAGE = 0.3
     MUTATION_PERCENTAGE = 0.01
@@ -40,7 +40,7 @@ def main():
     first_population = md.create_population(MIN_GENE_VALUE,MAX_GENE_VALUE,TOTAL_POPULATION,TOTAL_GENES)
     current_population = first_population
     succeeded_chromosomes = md.get_best_chromosomes(current_population, TARGET_VALUE)
-    generations = 1
+    data.generations = 1
     mutations = 0
     bestscore = TOTAL_GENES * MIN_GENE_VALUE
     
@@ -57,7 +57,8 @@ def main():
         succeeded_chromosomes = md.get_best_chromosomes(current_population, TARGET_VALUE)
         bestscore = sum(max(current_population))
 
-        generations +=1
+        data.generations +=1
+        await asyncio.sleep(0)
         mutations += len(mutated_population)
     
     END_TIME = datetime.now()
@@ -69,7 +70,7 @@ def main():
     print_c(MAX_VALUE, GREEN)
     
     print_c("Houve ", WHITE, False)
-    print_c(generations, L_BLUE, False)
+    print_c(data.generations, L_BLUE, False)
     print_c(" gerações, ", WHITE, False)
     print_c(mutations, YELLOW, False)
     print_c(" mutações. Cromossomos sucedidos (", WHITE, False)
@@ -81,4 +82,11 @@ def main():
     print_c("", WHITE)
 
 
-main()
+
+#Criado por Pedro Barros (github.com/Pedro-Barros77) 
+#e Elias Lima (github.com/Elias-Lima-code)
+#(UNA - 'Sistemas de Informação' e 'Gestão de Tecnologia da Informação')
+#para fins de prática e estudos em Inteligência Artificial,
+#Primeira versão em 24-09-2022
+
+#Uso e implementação livre, favor incluir os devidos créditos
