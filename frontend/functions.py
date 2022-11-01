@@ -1,7 +1,5 @@
-from cProfile import label
 import datetime
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton
-from PyQt5.QtCore import pyqtSlot
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
@@ -97,7 +95,7 @@ class functionalities():
             _winners_lbl[i].setText("  " + str(x))
             _winners_sum[i].setText(str(sum(x)))
 
-        self.app.ui.tableWidget.setRowCount(len(podium)) 
+        self.app.ui.tableWidget.setRowCount(len(podium[len(_winners):])) 
         self.app.ui.tableWidget.setColumnCount(2) 
         self.app.ui.tableWidget.setColumnHidden(2,True) 
         self.app.ui.tableWidget.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
@@ -107,5 +105,5 @@ class functionalities():
         for i, x in enumerate(podium[len(_winners):]):
             self.app.ui.tableWidget.setItem(i, 1, QTableWidgetItem((f"  { str(x)}  ")))
             self.app.ui.tableWidget.setItem(i, 0, QTableWidgetItem(str(sum(x))))
-            self.app.ui.tableWidget.item(i,1).setTextAlignment(QtCore.Qt.AlignCenter)
+            self.app.ui.tableWidget.item(i,0).setTextAlignment(QtCore.Qt.AlignCenter)
       

@@ -7,7 +7,6 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 import sys
-
 from matplotlib.pyplot import draw, gca
 from frontend.resources.icons_qrc import icons
 from frontend.resources.imgs import background_img
@@ -44,11 +43,11 @@ class menu_principal(QMainWindow, Ui_MainWindow):
             sleep(1)
         self.input_values = {
             'population': self.ui.spinbox_population.value(),
-            'total_genes':30,# self.ui.spinbox_total_genes.value(),
+            'total_genes':self.ui.spinbox_total_genes.value(),
             'max_genes': self.ui.spinbox_max_genes.value(),
             'min_genes': self.ui.spinbox_min_genes.value(),
-            'target_perc':98/100,#(self.ui.spinbox_taget_percentage.value() / 100),
-            'min_succeed':50,# self.ui.spinbox_min_succeeded.value(),
+            'target_perc':(self.ui.spinbox_taget_percentage.value() / 100),
+            'min_succeed':self.ui.spinbox_min_succeeded.value(),
             'chosen_perc': (self.ui.spinbox_chosen_percentage.value() / 100),
             'mutation_perc': (self.ui.spinbox_mutation_percentage.value() / 100),
         }

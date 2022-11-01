@@ -1304,7 +1304,7 @@ color: rgb(58, 183, 104);</string>
                             <string/>
                            </property>
                            <property name="alignment">
-                            <set>Qt::AlignCenter</set>
+                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                            </property>
                           </widget>
                          </item>
@@ -1713,9 +1713,9 @@ border: 1px solid black;</string>
 }
 QTableView::item{
    	border: 1px solid black;
-   	border-radius: 15px;
+   	border-radius: 10px;
 	background-color: rgb(255, 255, 255);
-	margin: 0 4; 
+	margin: 4; 
 }
 </string>
                                </property>
@@ -2182,7 +2182,7 @@ background-color: rgba(255, 255, 255, 0);</string>
                          <string>Mutations:</string>
                         </property>
                         <property name="alignment">
-                         <set>Qt::AlignCenter</set>
+                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                         </property>
                        </widget>
                       </item>
@@ -2204,7 +2204,7 @@ border:none;</string>
                          <string>Generetions:</string>
                         </property>
                         <property name="alignment">
-                         <set>Qt::AlignCenter</set>
+                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                         </property>
                        </widget>
                       </item>
@@ -2260,7 +2260,7 @@ background-color: rgba(255, 255, 255, 0);</string>
                          <string>Best Score:</string>
                         </property>
                         <property name="alignment">
-                         <set>Qt::AlignCenter</set>
+                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                         </property>
                        </widget>
                       </item>
@@ -2323,7 +2323,7 @@ background-color: rgba(255, 255, 255, 0);</string>
                          <string>Worst Score:</string>
                         </property>
                         <property name="alignment">
-                         <set>Qt::AlignCenter</set>
+                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                         </property>
                        </widget>
                       </item>

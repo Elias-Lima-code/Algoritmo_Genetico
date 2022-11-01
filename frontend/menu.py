@@ -472,7 +472,7 @@ class Ui_MainWindow(object):
         self.lbl_perfect_value.setStyleSheet("font: 14pt \"MS Shell Dlg 2\";\n"
 "color: rgb(58, 183, 104);")
         self.lbl_perfect_value.setText("")
-        self.lbl_perfect_value.setAlignment(QtCore.Qt.AlignCenter)
+        self.lbl_perfect_value.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.lbl_perfect_value.setObjectName("lbl_perfect_value")
         self.horizontalLayout_14.addWidget(self.lbl_perfect_value)
         self.horizontalLayout_6.addWidget(self.conteiner_lbl_perfect)
@@ -685,9 +685,9 @@ class Ui_MainWindow(object):
 "}\n"
 "QTableView::item{\n"
 "       border: 1px solid black;\n"
-"       border-radius: 15px;\n"
+"       border-radius: 10px;\n"
 "    background-color: rgb(255, 255, 255);\n"
-"    margin: 0 4; \n"
+"    margin: 4; \n"
 "}\n"
 "")
         self.tableWidget.setSizeAdjustPolicy(QtWidgets.QAbstractScrollArea.AdjustToContents)
@@ -846,7 +846,7 @@ class Ui_MainWindow(object):
 "font: 12pt \"MS Shell Dlg 2\";\n"
 "border:none;\n"
 "background-color: rgba(255, 255, 255, 0);")
-        self.lbl_muts_name.setAlignment(QtCore.Qt.AlignCenter)
+        self.lbl_muts_name.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.lbl_muts_name.setObjectName("lbl_muts_name")
         self.gridLayout_2.addWidget(self.lbl_muts_name, 1, 0, 1, 1)
         self.lbl_gens_name = QtWidgets.QLabel(self.lif_holder_lbl_container)
@@ -855,7 +855,7 @@ class Ui_MainWindow(object):
 "font: 12pt \"MS Shell Dlg 2\";\n"
 "background-color: rgba(255, 255, 255, 0);\n"
 "border:none;")
-        self.lbl_gens_name.setAlignment(QtCore.Qt.AlignCenter)
+        self.lbl_gens_name.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.lbl_gens_name.setObjectName("lbl_gens_name")
         self.gridLayout_2.addWidget(self.lbl_gens_name, 0, 0, 1, 1)
         self.lbl_elapsed_time_name = QtWidgets.QLabel(self.lif_holder_lbl_container)
@@ -879,7 +879,7 @@ class Ui_MainWindow(object):
         self.lbl_best_score_name.setStyleSheet("border:none;\n"
 "font: 12pt \"MS Shell Dlg 2\";\n"
 "background-color: rgba(255, 255, 255, 0);")
-        self.lbl_best_score_name.setAlignment(QtCore.Qt.AlignCenter)
+        self.lbl_best_score_name.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.lbl_best_score_name.setObjectName("lbl_best_score_name")
         self.gridLayout_2.addWidget(self.lbl_best_score_name, 2, 0, 1, 1)
         self.lbl_gens_value = QtWidgets.QLabel(self.lif_holder_lbl_container)
@@ -911,7 +911,7 @@ class Ui_MainWindow(object):
         self.lbl_worst_score_name.setStyleSheet("border:none;\n"
 "font: 12pt \"MS Shell Dlg 2\";\n"
 "background-color: rgba(255, 255, 255, 0);")
-        self.lbl_worst_score_name.setAlignment(QtCore.Qt.AlignCenter)
+        self.lbl_worst_score_name.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.lbl_worst_score_name.setObjectName("lbl_worst_score_name")
         self.gridLayout_2.addWidget(self.lbl_worst_score_name, 3, 0, 1, 1)
         self.lbl_best_score_value = QtWidgets.QLabel(self.lif_holder_lbl_container)
